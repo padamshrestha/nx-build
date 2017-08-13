@@ -1,0 +1,35 @@
+{
+  "name": "@nrwl/nx",
+  "version": "0.0.1",
+  "description": "Nrwl Extensions for Angular",
+  "main": "index.js",
+  "scripts": {
+    "build": "./scripts/build.sh",
+    "e2e": "yarn build && ./scripts/e2e.sh",
+    "release": "yarn build && ./scripts/release.sh"
+  },
+  "dependencies" :{
+    "@angular-devkit/schematics": "0.0.16",
+    "jasmine-marbles": "0.1.0"
+  },
+  "peerDependencies" :{
+    "rxjs": "*"
+  },
+  "devDependencies": {
+    "rxjs": "5.4.3",
+    "typescript": "2.4.2",
+    "@types/node": "8.0.7",
+    "@types/jasmine": "2.5.53",
+    "jest": "20.0.4",
+    "@schematics/angular": "git+https://github.com/Brocco/zzz-ng-schematics.git"
+  },
+  "author": "Victor Savkin",
+  "license": "MIT",
+  "jest" : {
+    "modulePathIgnorePatterns": [
+      "tmp",
+      "files"
+    ]
+  },
+  "schematics": "schematics/collection.json"
+}
